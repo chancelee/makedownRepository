@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ska-Z3-kzC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="abL-ke-XVR">
+            <objects>
+                <viewController id="ska-Z3-kzC" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wEo-6O-xfl"/>
+                        <viewControllerLayoutGuide type="bottom" id="GzG-7R-V8a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZQ3-P1-Nst">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-rm-JRV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前没有用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhA-Kw-IEn">
+                                        <rect key="frame" x="135" y="323" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mhA-Kw-IEn" firstAttribute="centerX" secondItem="4C0-rm-JRV" secondAttribute="centerX" id="CaA-5B-JKC"/>
+                                    <constraint firstItem="mhA-Kw-IEn" firstAttribute="centerY" secondItem="4C0-rm-JRV" secondAttribute="centerY" id="cfI-kl-Xfg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-cW-qmc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Im-7M-Ik3">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4C0-rm-JRV" firstAttribute="top" secondItem="ZQ3-P1-Nst" secondAttribute="top" id="3IM-yd-y3u"/>
+                            <constraint firstAttribute="trailing" secondItem="BZy-cW-qmc" secondAttribute="trailing" id="8uw-dR-zxE"/>
+                            <constraint firstItem="4C0-rm-JRV" firstAttribute="leading" secondItem="ZQ3-P1-Nst" secondAttribute="leading" id="8wo-og-chC"/>
+                            <constraint firstAttribute="bottom" secondItem="BZy-cW-qmc" secondAttribute="bottom" id="XDV-x3-Cjl"/>
+                            <constraint firstAttribute="bottom" secondItem="4C0-rm-JRV" secondAttribute="bottom" id="d3P-uO-iag"/>
+                            <constraint firstAttribute="trailing" secondItem="4C0-rm-JRV" secondAttribute="trailing" id="eqt-qc-2yc"/>
+                            <constraint firstItem="BZy-cW-qmc" firstAttribute="leading" secondItem="ZQ3-P1-Nst" secondAttribute="leading" id="i0k-RC-Wir"/>
+                            <constraint firstItem="3Im-7M-Ik3" firstAttribute="centerY" secondItem="ZQ3-P1-Nst" secondAttribute="centerY" id="pUg-7t-fO1"/>
+                            <constraint firstItem="3Im-7M-Ik3" firstAttribute="centerX" secondItem="ZQ3-P1-Nst" secondAttribute="centerX" id="sea-ss-s3F"/>
+                            <constraint firstItem="BZy-cW-qmc" firstAttribute="top" secondItem="ZQ3-P1-Nst" secondAttribute="top" id="yhl-Zc-vhw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyView" destination="4C0-rm-JRV" id="H6u-nt-rA7"/>
+                        <outlet property="indicator" destination="3Im-7M-Ik3" id="40U-wu-J5k"/>
+                        <outlet property="tableView" destination="BZy-cW-qmc" id="VCk-iu-v1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaQ-m5-jJS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="110"/>
+        </scene>
+    </scenes>
+</document>
